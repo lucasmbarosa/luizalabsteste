@@ -1,9 +1,9 @@
 **INSTRUÇÕES PARA UTILIZAÇÃO DO WEBSERVICE**
 
-OBS : No exemplo de entrada enviado não tinha a propriedade "products" no nome do array de itens, adicionei pois precisei criar uma classe para parâmetro que 
-comtemplava filtro, ordenação e agrupamento.
+OBS : No exemplo de entrada enviado não tinha a propriedade "products" no nome do array de itens, adicionei pois precisei criar uma classe como parâmetro do método que 
+contemplava filtro, ordenação e agrupamento.
 
-O endereço do endpoint é sempre o ip address da máquina seguido de "/api/organize", exemplo:
+O endereço do endpoint é sempre o ip address da máquina seguido de "/api/main/organize", exemplo:
 
 http://192.168.1.1:8080/api/main/organize/
 
