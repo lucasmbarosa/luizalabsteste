@@ -3,7 +3,6 @@ package com.luizalabs.teste.helper;
 import static java.util.Collections.reverseOrder;
 import static java.util.Comparator.comparing;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Map;
