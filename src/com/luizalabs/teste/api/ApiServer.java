@@ -42,9 +42,7 @@ public class ApiServer {
         String ip = getIp();
         BASE_URI = String.format("http://%s:%s/api/", ip, PORT);
         HttpServer httpServer = GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc, false);
-        httpServer.getServerConfiguration().addHttpHandler(new StaticHttpHandler("resources/www/"), "/");
-
-        // Dynamic content handler at http://localhost:{port}/dynamic
+                
         httpServer.getServerConfiguration().addHttpHandler(new HttpHandler() {
             @Override
             public void service(Request request, Response response) throws Exception {

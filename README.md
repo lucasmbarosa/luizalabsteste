@@ -3,7 +3,7 @@
 OBS : No exemplo de entrada enviado não tinha a propriedade "products" no nome do array de itens, adicionei pois precisei criar uma classe como parâmetro do método que 
 contemplava filtro, ordenação e agrupamento.
 
-O endereço do endpoint é sempre o ip address da máquina seguido de "/api/main/organize", exemplo:
+O endereço do endpoint é sempre o ip address da máquina, na porta "8080" seguido de "/api/main/organize", exemplo:
 
 http://192.168.1.1:8080/api/main/organize/
 
