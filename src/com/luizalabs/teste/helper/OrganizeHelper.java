@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-import com.luizalabs.teste.common.Product;
+import com.luizalabs.teste.model.Product;
 
 /**
  * Classe helper para organização dos dados de entrada

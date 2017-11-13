@@ -6,8 +6,8 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
-import com.luizalabs.teste.common.PayLoadIn;
-import com.luizalabs.teste.common.PayLoadOut;
+import com.luizalabs.teste.model.PayLoadIn;
+import com.luizalabs.teste.model.PayLoadOut;
 import com.luizalabs.teste.service.LoggerService;
 import com.luizalabs.teste.service.PayLoadInService;
 

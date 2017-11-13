@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.luizalabs.teste.common.PayLoadIn;
-import com.luizalabs.teste.common.PayLoadOut;
-import com.luizalabs.teste.common.Product;
 import com.luizalabs.teste.helper.OrganizeHelper;
+import com.luizalabs.teste.model.PayLoadIn;
+import com.luizalabs.teste.model.PayLoadOut;
+import com.luizalabs.teste.model.Product;
 
 /**
  * Classe de serviço para organização dos dados de entrada

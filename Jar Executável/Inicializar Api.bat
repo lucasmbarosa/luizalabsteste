@@ -1,0 +1,1 @@
+start java -jar api-jar-with-dependencies.jar
