@@ -58,12 +58,12 @@ Abaixo seguem exemplos de entrada :
 				"stock":	82				
 			}
 		],
-	"filter" : "id:123"
+	"filter" : "id:123;brand:nikana"
 }
 
 
 
-3 - Exemplo de entrada com ordenação por "id" "ascendente" (lembrando que pode-se mudar de "asc" para "desc", e mudar o campo de ordenação).
+3 - Exemplo de entrada com ordenação.
 
  {  
 	"products" : 
@@ -85,7 +85,7 @@ Abaixo seguem exemplos de entrada :
 				"stock":	82				
 			}
 		],
-	"orderBy" : "id:asc"
+	"orderBy" : "id:asc;brand:desc"
 }
 
 

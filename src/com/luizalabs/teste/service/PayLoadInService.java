@@ -99,13 +99,16 @@ public class PayLoadInService {
 	 * @throws Exception
 	 */
 	private ArrayList<PayLoadOut> orderByCustom(ArrayList<PayLoadOut> payLoadOut, String orderBy) throws Exception {
-		String order[] = orderBy.split(":");
-		for (int i = 0; i < payLoadOut.size(); i++) {
-			ArrayList<Product> listOfProducts = payLoadOut.get(i).getItems();
-			Stream<Product> stream = listOfProducts.stream().sorted(OrganizeHelper.getComparator(order));
-			listOfProducts = stream.collect(Collectors.toCollection(ArrayList::new));
-			payLoadOut.get(i).setItems(listOfProducts);
-		}
+		String order[] = orderBy.split(";");
+		for (int e=0; e < order.length; e ++) {
+			String order2[] = order[e].split(":");
+			for (int i = 0; i < payLoadOut.size(); i++) {
+				ArrayList<Product> listOfProducts = payLoadOut.get(i).getItems();
+				Stream<Product> stream = listOfProducts.stream().sorted(OrganizeHelper.getComparator(order2));
+				listOfProducts = stream.collect(Collectors.toCollection(ArrayList::new));
+				payLoadOut.get(i).setItems(listOfProducts);
+			}
+		}		
 		return payLoadOut;
 	}
 
@@ -118,10 +121,14 @@ public class PayLoadInService {
 	 * @throws Exception
 	 */
 	private ArrayList<Product> filterCustom(ArrayList<Product> products, String filter) throws Exception {
-		String filterField[] = filter.split(":");
-		Stream<Product> streamF = products.stream()
-				.filter(OrganizeHelper.getGroupByComparator(filterField[0], filterField[1]));
-		ArrayList<Product> listOfProducts = streamF.collect(Collectors.toCollection(ArrayList::new));
+		String filterField_[] = filter.split(";");
+		ArrayList<Product> listOfProducts = new ArrayList<>();
+		for (int e=0;e < filterField_.length; e ++) {
+			String filterField[] = filterField_[e].split(":");
+			Stream<Product> streamF = products.stream()
+					.filter(OrganizeHelper.getGroupByComparator(filterField[0], filterField[1]));
+			listOfProducts = streamF.collect(Collectors.toCollection(ArrayList::new));
+		}		
 		return listOfProducts;
 
 	}
